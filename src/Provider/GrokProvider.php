@@ -16,6 +16,7 @@ use WordPress\AiClient\Providers\Http\Enums\RequestAuthenticationMethod;
 use WordPress\AiClient\Providers\Models\Contracts\ModelInterface;
 use WordPress\AiClient\Providers\Models\DTO\ModelMetadata;
 use Aslam\GrokAiProvider\Metadata\GrokModelMetadataDirectory;
+use Aslam\GrokAiProvider\Models\GrokImageGenerationModel;
 use Aslam\GrokAiProvider\Models\GrokTextGenerationModel;
 
 /**
@@ -49,6 +50,9 @@ class GrokProvider extends AbstractApiProvider
             if ($capability->isTextGeneration()) {
                 return new GrokTextGenerationModel($modelMetadata, $providerMetadata);
             }
+            if ($capability->isImageGeneration()) {
+                return new GrokImageGenerationModel($modelMetadata, $providerMetadata);
+            }
         }
 
         throw new RuntimeException(
@@ -68,14 +72,17 @@ class GrokProvider extends AbstractApiProvider
             'Grok (xAI)',
             ProviderTypeEnum::cloud(),
             'https://console.x.ai/',
-            RequestAuthenticationMethod::apiKey(),
         ];
+        // Authentication method support was added in 0.4.0.
+        if (class_exists(RequestAuthenticationMethod::class)) {
+            $providerMetadataArgs[] = RequestAuthenticationMethod::apiKey();
+        }
         // Provider description support was added in 1.2.0.
-        if (version_compare(AiClient::VERSION, '1.2.0', '>=')) {
+        if (defined(AiClient::class . '::VERSION') && version_compare(AiClient::VERSION, '1.2.0', '>=')) {
             if (function_exists('__')) {
-                $providerMetadataArgs[] = __('Text generation with Grok models by xAI.', 'aslams-provider-for-grok-ai');
+                $providerMetadataArgs[] = __('Text and image generation with Grok models by xAI.', 'aslams-provider-for-grok-ai');
             } else {
-                $providerMetadataArgs[] = 'Text generation with Grok models by xAI.';
+                $providerMetadataArgs[] = 'Text and image generation with Grok models by xAI.';
             }
 
             // Provider logo support was added in 1.3.0.

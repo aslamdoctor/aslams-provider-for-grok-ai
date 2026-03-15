@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Aslam\GrokAiProvider\Metadata;
 
+use WordPress\AiClient\Files\Enums\FileTypeEnum;
+use WordPress\AiClient\Files\Enums\MediaOrientationEnum;
 use WordPress\AiClient\Messages\Enums\ModalityEnum;
 use WordPress\AiClient\Providers\Http\DTO\Request;
 use WordPress\AiClient\Providers\Http\DTO\Response;
@@ -91,17 +93,40 @@ class GrokModelMetadataDirectory extends AbstractOpenAiCompatibleModelMetadataDi
             CapabilityEnum::chatHistory(),
         ];
 
+        $imageCapabilities = [
+            CapabilityEnum::imageGeneration(),
+        ];
+        $imageOptions = [
+            new SupportedOption(OptionEnum::inputModalities(), [[ModalityEnum::text()]]),
+            new SupportedOption(OptionEnum::outputModalities(), [[ModalityEnum::image()]]),
+            new SupportedOption(OptionEnum::candidateCount()),
+            new SupportedOption(OptionEnum::outputMimeType(), ['image/png', 'image/jpeg', 'image/webp']),
+            new SupportedOption(OptionEnum::outputFileType(), [FileTypeEnum::inline(), FileTypeEnum::remote()]),
+            new SupportedOption(OptionEnum::outputMediaOrientation(), [
+                MediaOrientationEnum::square(),
+                MediaOrientationEnum::landscape(),
+                MediaOrientationEnum::portrait(),
+            ]),
+            new SupportedOption(OptionEnum::outputMediaAspectRatio(), ['1:1', '3:2', '2:3']),
+            new SupportedOption(OptionEnum::customOptions()),
+        ];
+
         $modelsData = (array) $responseData['data'];
 
         $models = array_values(
             array_filter(
                 array_map(
-                    static function (array $modelData) use ($textCapabilities, $textOnlyOptions, $visionOptions): ?ModelMetadata {
+                    static function (array $modelData) use ($textCapabilities, $textOnlyOptions, $visionOptions, $imageCapabilities, $imageOptions): ?ModelMetadata {
                         $modelId = $modelData['id'];
 
-                        // Skip image generation models (not supported yet).
+                        // Image generation models (e.g. grok-2-image-1212, grok-imagine-image).
                         if (str_contains($modelId, 'image') || str_contains($modelId, 'imagine')) {
-                            return null;
+                            return new ModelMetadata(
+                                $modelId,
+                                $modelId,
+                                $imageCapabilities,
+                                $imageOptions
+                            );
                         }
 
                         // Vision models support image input.
