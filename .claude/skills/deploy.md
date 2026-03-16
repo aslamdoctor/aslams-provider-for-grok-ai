@@ -1,4 +1,5 @@
 ---
+name: deploy
 description: Deploy a new version of the plugin to WordPress.org via GitHub Actions
 user_invocable: true
 ---
