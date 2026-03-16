@@ -20,7 +20,7 @@ use Aslam\GrokAiProvider\Models\GrokImageGenerationModel;
 use Aslam\GrokAiProvider\Models\GrokTextGenerationModel;
 
 /**
- * Class for Aslam's Provider for Grok AI.
+ * Class for Third-Party Provider for Grok.
  *
  * @since 1.0.0
  */

@@ -1,6 +1,6 @@
-# Aslam's Provider for Grok AI
+# Third-Party Provider for Grok
 
-Aslam's Provider for [Grok AI](https://x.ai/) (by xAI) for the [WP AI Client](https://github.com/WordPress/wp-ai-client) SDK. Works as both a Composer package and a WordPress plugin.
+Third-Party Provider for [Grok](https://x.ai/) (by xAI) for the [WP AI Client](https://github.com/WordPress/wp-ai-client) SDK. Works as both a Composer package and a WordPress plugin.
 
 ## Requirements
 

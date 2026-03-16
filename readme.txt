@@ -1,4 +1,4 @@
-=== Aslam's Provider for Grok AI ===
+=== Third-Party Provider for Grok ===
 Contributors: aslamdoctor
 Donate link: https://github.com/sponsors/aslamdoctor
 Tags: ai, grok, xai, artificial-intelligence
@@ -9,7 +9,7 @@ Requires PHP: 7.4
 License: GPL-3.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Aslam's Provider for Grok AI (xAI) for the WP AI Client SDK.
+Third-Party Provider for Grok (xAI) for the WP AI Client SDK.
 
 == Description ==
 

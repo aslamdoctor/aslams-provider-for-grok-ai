@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PSR-4 autoloader for Aslam's Provider for Grok AI package.
+ * PSR-4 autoloader for Third-Party Provider for Grok package.
  *
  * @since 1.0.0
  *

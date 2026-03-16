@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Plugin Name: Aslam's Provider for Grok AI
+ * Plugin Name: Third-Party Provider for Grok
  * Plugin URI: https://github.com/aslamdoctor/aslams-provider-for-grok-ai
- * Description: Aslam's Provider for Grok AI (xAI) for the WordPress AI Client.
+ * Description: Third-Party Provider for Grok (xAI) for the WordPress AI Client.
  * Requires at least: 6.9
  * Requires PHP: 7.4
  * Version: 1.0.0
