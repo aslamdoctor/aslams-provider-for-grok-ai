@@ -98,6 +98,15 @@ Data is only sent when the plugin is actively used to generate text or when chec
 * xAI Terms of Service: [https://x.ai/legal/terms-of-service](https://x.ai/legal/terms-of-service)
 * xAI Privacy Policy: [https://x.ai/legal/privacy-policy](https://x.ai/legal/privacy-policy)
 
+== Contributing ==
+
+We welcome contributions! You can help by:
+
+* Reporting bugs or suggesting features via [GitHub Issues](https://github.com/aslamdoctor/aslams-provider-for-grok-ai/issues)
+* Submitting pull requests on [GitHub](https://github.com/aslamdoctor/aslams-provider-for-grok-ai)
+
+Please read our [Contributing Guide](https://github.com/aslamdoctor/aslams-provider-for-grok-ai/blob/master/CONTRIBUTING.md) before submitting a pull request.
+
 == Changelog ==
 
 = 1.0.0 =
