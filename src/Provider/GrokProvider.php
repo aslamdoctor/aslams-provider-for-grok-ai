@@ -20,7 +20,7 @@ use Aslam\GrokAiProvider\Models\GrokImageGenerationModel;
 use Aslam\GrokAiProvider\Models\GrokTextGenerationModel;
 
 /**
- * Class for Third-Party Provider for Grok.
+ * Class for AI Provider for Grok.
  *
  * @since 1.0.0
  */
@@ -80,7 +80,7 @@ class GrokProvider extends AbstractApiProvider
         // Provider description support was added in 1.2.0.
         if (defined(AiClient::class . '::VERSION') && version_compare(AiClient::VERSION, '1.2.0', '>=')) {
             if (function_exists('__')) {
-                $providerMetadataArgs[] = __('Text and image generation with Grok models by xAI.', 'aslams-provider-for-grok-ai');
+                $providerMetadataArgs[] = __('Text and image generation with Grok models by xAI.', 'ai-provider-for-grok');
             } else {
                 $providerMetadataArgs[] = 'Text and image generation with Grok models by xAI.';
             }

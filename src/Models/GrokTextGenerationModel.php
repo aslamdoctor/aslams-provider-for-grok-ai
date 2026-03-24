@@ -10,7 +10,7 @@ use WordPress\AiClient\Providers\OpenAiCompatibleImplementation\AbstractOpenAiCo
 use Aslam\GrokAiProvider\Provider\GrokProvider;
 
 /**
- * Class for text generation models used by Third-Party Provider for Grok.
+ * Class for text generation models used by AI Provider for Grok.
  *
  * @since 1.0.0
  */

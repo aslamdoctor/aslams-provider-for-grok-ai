@@ -1,4 +1,4 @@
-=== Third-Party Provider for Grok ===
+=== AI Provider for Grok ===
 Contributors: aslamdoctor
 Donate link: https://github.com/sponsors/aslamdoctor
 Tags: ai, grok, xai, artificial-intelligence
@@ -9,7 +9,7 @@ Requires PHP: 7.4
 License: GPL-3.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Third-Party Provider for Grok (xAI) for the WP AI Client SDK.
+AI Provider for Grok (xAI) for the WP AI Client SDK.
 
 == Description ==
 
@@ -35,7 +35,7 @@ Available models are dynamically discovered from the Grok API.
 
 1. Purchase API tokens from [x.ai](https://x.ai/) if you haven't already
 2. Ensure the WP AI Client plugin is installed and activated
-3. Upload the plugin files to `/wp-content/plugins/aslams-provider-for-grok-ai/`
+3. Upload the plugin files to `/wp-content/plugins/ai-provider-for-grok/`
 4. Activate the plugin through the 'Plugins' menu in WordPress
 5. Go to Settings > AI Credentials and enter your Grok (xAI) API key
 
@@ -65,7 +65,7 @@ Requires a Grok model with vision capabilities.
 
 `$json = AI_Client::prompt( 'Analyze this topic: WordPress plugins' )->using_provider( 'grok' )->as_json_response( $schema )->generate_text();`
 
-For full usage examples including chat history, function calling, and feature detection, see the [README on GitHub](https://github.com/aslamdoctor/aslams-provider-for-grok-ai).
+For full usage examples including chat history, function calling, and feature detection, see the [README on GitHub](https://github.com/aslamdoctor/ai-provider-for-grok).
 
 == Frequently Asked Questions ==
 
@@ -102,10 +102,10 @@ Data is only sent when the plugin is actively used to generate text or when chec
 
 We welcome contributions! You can help by:
 
-* Reporting bugs or suggesting features via [GitHub Issues](https://github.com/aslamdoctor/aslams-provider-for-grok-ai/issues)
-* Submitting pull requests on [GitHub](https://github.com/aslamdoctor/aslams-provider-for-grok-ai)
+* Reporting bugs or suggesting features via [GitHub Issues](https://github.com/aslamdoctor/ai-provider-for-grok/issues)
+* Submitting pull requests on [GitHub](https://github.com/aslamdoctor/ai-provider-for-grok)
 
-Please read our [Contributing Guide](https://github.com/aslamdoctor/aslams-provider-for-grok-ai/blob/master/CONTRIBUTING.md) before submitting a pull request.
+Please read our [Contributing Guide](https://github.com/aslamdoctor/ai-provider-for-grok/blob/master/CONTRIBUTING.md) before submitting a pull request.
 
 == Changelog ==
 

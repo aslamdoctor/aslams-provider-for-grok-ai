@@ -1,10 +1,10 @@
-# Contributing to Third-Party Provider for Grok
+# Contributing to AI Provider for Grok
 
 Thank you for your interest in contributing! Here's how you can help.
 
 ## Reporting Issues
 
-Before opening an issue, please search [existing issues](https://github.com/aslamdoctor/aslams-provider-for-grok-ai/issues) to avoid duplicates.
+Before opening an issue, please search [existing issues](https://github.com/aslamdoctor/ai-provider-for-grok/issues) to avoid duplicates.
 
 When reporting a bug, include:
 - WordPress version
@@ -18,7 +18,7 @@ When reporting a bug, include:
 1. Clone the repository into your WordPress plugins directory:
    ```bash
    cd wp-content/plugins/
-   git clone https://github.com/aslamdoctor/aslams-provider-for-grok-ai.git
+   git clone https://github.com/aslamdoctor/ai-provider-for-grok.git
    ```
 
 2. Ensure the [WP AI Client](https://github.com/WordPress/wp-ai-client) plugin is installed and activated.
@@ -51,7 +51,7 @@ When reporting a bug, include:
 ## Plugin Architecture
 
 ```
-├── aslams-provider-for-grok-ai.php   # Main plugin file
+├── ai-provider-for-grok.php   # Main plugin file
 ├── src/
 │   ├── autoload.php                   # PSR-4 autoloader
 │   ├── Models/

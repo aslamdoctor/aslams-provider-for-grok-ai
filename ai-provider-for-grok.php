@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Plugin Name: Third-Party Provider for Grok
- * Plugin URI: https://github.com/aslamdoctor/aslams-provider-for-grok-ai
- * Description: Third-Party Provider for Grok (xAI) for the WordPress AI Client.
+ * Plugin Name: AI Provider for Grok
+ * Plugin URI: https://github.com/aslamdoctor/ai-provider-for-grok
+ * Description: AI Provider for Grok (xAI) for the WordPress AI Client.
  * Requires at least: 6.9
  * Requires PHP: 7.4
  * Version: 1.0.1
@@ -11,7 +11,7 @@
  * Author URI: https://github.com/sponsors/aslamdoctor
  * License: GPL-3.0-or-later
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain: aslams-provider-for-grok-ai
+ * Text Domain: ai-provider-for-grok
  *
  * @package Aslam\GrokAiProvider
  */
