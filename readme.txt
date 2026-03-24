@@ -4,7 +4,7 @@ Donate link: https://github.com/sponsors/aslamdoctor
 Tags: ai, grok, xai, artificial-intelligence, connector
 Requires at least: 6.9
 Tested up to: 6.9
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Requires PHP: 7.4
 License: GPL-3.0-or-later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -108,6 +108,11 @@ We welcome contributions! You can help by:
 Please read our [Contributing Guide](https://github.com/aslamdoctor/ai-provider-for-grok/blob/master/CONTRIBUTING.md) before submitting a pull request.
 
 == Changelog ==
+
+= 1.0.2 =
+* Renamed plugin to "AI Provider for Grok"
+* Restored WordPress.org plugin slug
+* Added 'connector' tag to readme.txt
 
 = 1.0.1 =
 * Updated banner images with WordPress + Grok logos
